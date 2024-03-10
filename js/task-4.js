@@ -20,20 +20,21 @@ function getShippingCost(country) {
       price = 120;
       break;
     }
-    
+
     // default: {
     //   return "Sorry, there is no delivery to your country";
     // }
   }
 
-//   if (!price) {
-//     return "Sorry, there is no delivery to your country";
-//   }
+  //   if (!price) {
+  //     return "Sorry, there is no delivery to your country";
+  //   }
 
-//   return `Shipping to ${country} will cost ${price} credits`;
+  //   return `Shipping to ${country} will cost ${price} credits`;
 
-return price ? `Shipping to ${country} will cost ${price} credits` : 'Sorry, there is no delivery to your country';
-
+  return price
+    ? `Shipping to ${country} will cost ${price} credits`
+    : "Sorry, there is no delivery to your country";
 }
 
 console.log(getShippingCost("Australia")); // "Shipping to Australia will cost 170 credits"
